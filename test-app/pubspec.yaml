@@ -3,7 +3,14 @@ author: Seth Ladd <sethladd@gmail.com>
 version: 0.0.1
 homepage: https://github.com/igrigorik/heroku-buildpack-dart
 description: A minimal static HTTP server to demonstrate Dart on Heroku.
+
+# add env to remove warning from pub about SDK constraint
+environment:
+  sdk: ">=2.10.0 <3.0.0"
+
+# update version to remove warning 'browser any which requires SDK version <2.0.0, version solving failed'
 dependencies:
-  browser: any
+  # browser: any
+  browser: ^0.10.0+3
   shelf: any
   shelf_static: any
